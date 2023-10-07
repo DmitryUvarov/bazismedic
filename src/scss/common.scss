@@ -1,1 +1,20 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+.social {
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("column-gap", 20, 15);
+  &__item {
+    @include adaptiveValue("font-size", 50, 40);
+    border-radius: 50%;
+
+    transition: all 0.3s ease-out 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 40px;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
