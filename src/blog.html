@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Блог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header-dark.htm',{})
+        <main class="page">
+
+            <section class="blog">
+                <div class="blog__container">
+                    <div class="blog__items">
+                        <article class="blog__item item-blog item-blog_text">
+                            <h1 class="blog__subtitle">Наш блог</h1>
+                            <p class="blog__text">Мы делимся советами по уходу за кожей, полезной информацией
+                                о новинках в сфере косметологии, пластической
+                                и эстетической хирургии. </p>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/01.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Расширяя горизонты: как стать квалифицированной медсестрой в косметологии</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/02.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Филлеры: искусство коррекции и восстановления объема лица</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/03.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Безопасность и эффективность инъекций ботокса: что каждый косметолог должен знать</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/04.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Какие навыки и знания необходимы младшей медсестре для успешной работы в косметологической клинике</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/05.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Новые методы лифтинга: тредлифтинг, мезонити
+                                    и 3D нити</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/06.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Инъекции ботокса для различных возрастных проблем: выбор оптимальной методики</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <a href="#" class="item-blog__image-ibg"><img src="@img/blog/07.jpg" alt=""></a>
+                            <div class="item-blog__title"><a href="#">Филлеры и контурная пластика: современные методы красоты и молодости</a></div>
+                            <div class="item-blog__date">08.09.2023</div>
+                        </article>
+                    </div>
+                    <button class="blog__button button button_line">ЗАГРУЗИТЬ ЕЩЁ</button>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

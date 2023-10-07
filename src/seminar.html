@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница семинара"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header-dark.htm',{})
+        <main class="page">
+
+            <section class="seminar">
+                <div class="seminar__container">
+                    <div class="seminar__body">
+                        <div class="seminar__image-ibg"><img src="@img/seminars/prewiev.jpg" alt=""></div>
+                        <div class="seminar__content">
+                            <div class="seminar__date date">03.05.2023</div>
+                            <h1 class="seminar__title">Семинар по работе с филлерами</h1>
+                            <ul class="seminar__list list">
+                                <div class="list__title">Канюльная техника на нижней трети лица:</div>
+                                <li class="list__item">Ринопластика</li>
+                                <li class="list__item">Скулы</li>
+                                <li class="list__item">Ошибки в технике</li>
+                            </ul>
+                            <div class="seminar__price">Стоимость: 250 000 сум</div>
+                            <div class="seminar__adress">Адрес: г. Ташкент, Мирабадский р-н, ул. Афросияб, дом 12/1 Регистрация по номеру: <a href="tel:+998994811155">+998 99 481-11-55</a></div>
+                            <button class="seminar__button button button_line">Записаться на семинар</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="other-seminar">
+                <div class="other-seminar__container">
+                    <h2 class="other-seminar__title title">Другие семинары</h2>
+                    <div class="other-seminar__items">
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg"><img src="@img/seminars/02.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Мастер-класс по акупунктурному лифтингу</a></h4>
+                        </article>
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg"><img src="@img/seminars/03.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Повышение квалификации
+                                    для татуаж-мастеров</a></h4>
+                        </article>
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg"><img src="@img/seminars/04.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Мастер-класс «Безоперационное омоложение»</a></h4>
+                        </article>
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg"><img src="@img/seminars/06.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Родинки, бородавки, папилломы </a></h4>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

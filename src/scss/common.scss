@@ -118,7 +118,7 @@
   }
 
   &__text {
-    font-size: 16px;
+    font-size: toRem(16);
     font-weight: 400;
     line-height: 145%;
 
@@ -142,6 +142,39 @@
     top: 0;
     left: 0;
     z-index: -1;
+  }
+}
+
+//========================================================================================================================================================
+
+.date {
+  border-radius: toRem(12);
+  border: toRem(1) solid #131313;
+  padding: toRem(5);
+  width: fit-content;
+  @include adaptiveValue("font-size", 16, 14);
+}
+
+//========================================================================================================================================================
+
+.list {
+  &__title {
+  }
+
+  &__item {
+    position: relative;
+    @include adaptiveValue("padding-left", 25, 12);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: toRem(5);
+      height: toRem(5);
+      top: toRem(7);
+      @include adaptiveValue("left", 13, 0);
+      background-color: #2b2b2b;
+      border-radius: 50%;
+    }
   }
 }
 
