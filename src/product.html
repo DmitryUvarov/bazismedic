@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Карточка товара"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header-dark.htm',{})
+        <main class="page">
+
+            <section class="product">
+                <div class="product__container">
+                    <div class="product__body">
+                        <div class="product__image-ibg--contain"><img src="@img/product/01.jpg" alt=""></div>
+                        <div class="product__content">
+                            <h1 class="product__title">Филлеры Regenovue Deep</h1>
+                            <div class="product__text">
+                                <p>Филлер предназначен для устранения средних по глубине морщин. Гель используют для формирования контуров, натуральной волюмизации.
+                                    Средство популярно для увеличения губ, коррекции большинства распространенных дефектов (носогубные складки, межбровные заломы, крупные марионетки, губоподбородочные складки).
+                                    Гель средней плотности, вводится на уровне гиподермы. </p>
+                            </div>
+                            <button class="product__button button button_line">Купить </button>
+                        </div>
+                    </div>
+                    <div class="product__description description-product">
+                        <h5 class="description-product__title">Описание товара</h5>
+                        <div class="description-product__text">Монофазный филлер Regenovue Deep – это высокоретикулярное средство, гарантирующее стойкий результат увеличения объема губ. Препарат используется для контурной коррекции и увеличения объема губ, восстановления нормального уровня увлажненности и заполнения морщинок в уголках рта.
+                            Зона воздействия: Объем губ, Уголки губ, Контур губ
+                            Препарат c гиалуроновой кислотой, предназначенный для контурной пластики и увеличения губ, вводится в глубокий слой дермы или подкожные ткани.</div>
+
+                        <h5 class="description-product__subtitle">Преимущества препарата:</h5>
+
+                        <ul class="description-product__list list">
+                            <div class="list__title">Высокая степень поперечной межмолекулярной связи:</div>
+                            <li class="list__item">Связующий материал – бутандиеловый диглицедиловый эфир</li>
+                            <li class="list__item">Специальная техника производства находится в ожидании патента</li>
+                            <li class="list__item">Увеличение объёма и длительности действия</li>
+                        </ul>
+                        <ul class="description-product__list list">
+                            <div class="list__title">Высококачественная гиалуроновая кислота (ГК):</div>
+                            <li class="list__item">ГК неживотного происхождения</li>
+                            <li class="list__item">Только натуральные вещества</li>
+                            <li class="list__item">Исключительная чистота (эндотоксин < 0.0015МЕ/мг)</li>
+                            <li class="list__item">Натуральное впитывание</li>
+                        </ul>
+                        <ul class="description-product__list list">
+                            <div class="list__title">Прекрасная вязкость:</div>
+                            <li class="list__item">Долгий эффект</li>
+                            <li class="list__item">Поддержка фактуры кожи в стабильном состоянии для сохранения эластичности </li>
+                            <li class="list__item">Высокое содержание монофазной структуры:</li>
+                            <li class="list__item">Стабильная и постоянная структура</li>
+                            <li class="list__item">Натуральный объём</li>
+                            <li class="list__item">Плавность ввода филлера под кожу </li>
+                            <li class="list__item">Разглаживание кожи любой части лица</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="other-seminar">
+                <div class="other-seminar__container">
+                    <h2 class="other-seminar__title title">Похожие товары</h2>
+                    <div class="other-seminar__items">
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg--contain"><img src="@img/equipment/02.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Иглы для мезотерапии и микроинъекций Meso-relle 32G (0.23 х 4мм)</a></h4>
+                        </article>
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg--contain"><img src="@img/equipment/03.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Липолитик Lipo Lab V-Line</a></h4>
+                        </article>
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg--contain"><img src="@img/equipment/04.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Подтяжка интимных мышц HVR Hifu Vaginal Rejuvenation</a></h4>
+                        </article>
+                        <article class="other-seminar__item item-other-seminar">
+                            <a href="#" class="item-other-seminar__image-ibg--contain"><img src="@img/equipment/05.jpg" alt=""></a>
+                            <h4 class="item-other-seminar__title"><a href="#">Углеродная маска-гель для лица Taygete “Carbon Gel”</a></h4>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

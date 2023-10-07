@@ -1,0 +1,82 @@
+.product {
+  @include adaptiveValue("padding-top", 120, 50);
+  @include adaptiveValue("padding-bottom", 95, 60);
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 60, 20, 0, 1230, 767);
+    row-gap: toRem(30);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image-ibg--contain {
+    height: fit-content;
+    padding-bottom: percent(501, 570);
+    overflow: hidden;
+    border-radius: toRem(45);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 60, 25);
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 35, 25);
+    font-weight: 600;
+    line-height: 120%; /* 42px */
+  }
+
+  &__text {
+    line-height: 130%;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__description {
+    @include adaptiveValue("margin-top", 120, 50);
+  }
+}
+
+.description-product {
+  width: calc(50% - toRem(30));
+  display: grid;
+  @include adaptiveValue("gap", 30, 25);
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+  &__title {
+    color: #000;
+    @include adaptiveValue("font-size", 35, 25);
+    font-weight: 600;
+    line-height: 130%; /* 45.5px */
+  }
+
+  &__text {
+    line-height: 130%;
+  }
+
+  &__subtitle {
+    color: #000;
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: 130%; /* 31.2px */
+  }
+
+  &__list {
+    line-height: 145%;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 0);
+    }
+  }
+}
