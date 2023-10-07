@@ -3,8 +3,9 @@
 .social {
   display: flex;
   align-items: center;
-  @include adaptiveValue("column-gap", 20, 15);
+  @include adaptiveValue("gap", 20, 15);
   &__item {
+    color: #ffffff;
     @include adaptiveValue("font-size", 50, 40);
     border-radius: 50%;
 
