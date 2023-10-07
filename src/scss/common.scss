@@ -93,3 +93,56 @@
 }
 
 //========================================================================================================================================================
+
+.submit-block {
+  @include adaptiveValue("padding-top", 100, 50);
+  @include adaptiveValue("padding-bottom", 100, 50);
+  @include adaptiveValue("margin-top", 100, 40);
+  position: relative;
+  &__container {
+  }
+
+  &__body {
+    color: #fff;
+    text-align: center;
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 90, 30);
+    font-weight: 600;
+    line-height: 121.1%; /* 109/90 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 15);
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 145%;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 30);
+    }
+  }
+
+  &__button {
+    @media (min-width: $mobile) {
+      min-width: toRem(570);
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  &__bg-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+//========================================================================================================================================================
