@@ -32,6 +32,11 @@
     &:not(:last-child) {
       margin-bottom: em(30, 90);
     }
+
+    &_nomax {
+      @include adaptiveValue("font-size", 70, 35);
+      max-width: none;
+    }
   }
 
   &__text {

@@ -94,3 +94,52 @@
     pointer-events: none;
   }
 }
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+.article-blog {
+  @include adaptiveValue("padding-top", 60, 50);
+  @include adaptiveValue("padding-bottom", 190, 60);
+  &__container {
+  }
+
+  &__body {
+    line-height: 150%;
+    color: #000;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+  }
+
+  &__date {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 40);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 40);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+      margin-top: toRem(30);
+    }
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+  }
+}
