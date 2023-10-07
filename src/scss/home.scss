@@ -139,6 +139,112 @@
 }
 
 //====================================================================================================
+
+.links-course {
+  @include adaptiveValue("padding-top", 95, 40);
+  @include adaptiveValue("padding-bottom", 95, 40);
+
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__items {
+  }
+
+  &__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 60, 20, 0, 1230, 767);
+    row-gap: toRem(30);
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 120, 40);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 40, 28);
+    font-weight: 600;
+    line-height: 40px; /* 100% */
+    &:not(:last-child) {
+      margin-bottom: em(20, 40);
+    }
+
+    a {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: toRem(2);
+        bottom: toRem(-2);
+        left: 0;
+        background-color: #2b2b2b;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-out 0s;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          &::before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    line-height: 145%; /* 23.2px */
+
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 15, 10);
+      }
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 30);
+    }
+  }
+
+  &__link {
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__image-ibg {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: toRem(45);
+    padding-bottom: percent(400, 575);
+
+    img {
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
 //====================================================================================================
 //====================================================================================================
 //====================================================================================================
