@@ -9,7 +9,12 @@
     @include adaptiveValue("padding-top", 268, 200);
     @include adaptiveValue("padding-bottom", 130, 100);
     color: #fff;
+    display: flex;
+    flex-direction: column;
 
+    @media (min-width: $tablet) {
+      min-height: toRem(900);
+    }
     @media (max-width: $tablet) {
       text-align: center;
       min-height: 100vh;
@@ -45,6 +50,7 @@
   }
 
   &__line {
+    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +64,8 @@
   &__buttons {
     display: flex;
     align-items: center;
-    gap: toRem(15);
+    column-gap: toRem(30);
+    row-gap: toRem(15);
 
     @media (max-width: $tablet) {
       flex-direction: column;

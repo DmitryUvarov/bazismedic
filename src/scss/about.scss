@@ -1,0 +1,124 @@
+//========================================================================================================================================================
+
+.reviews {
+  @include adaptiveValue("padding-top", 115, 40);
+  @include adaptiveValue("padding-bottom", 55, 40);
+  &__container {
+  }
+
+  &__top {
+    @include adaptiveValue("margin-bottom", 50, 40);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(200), 1fr));
+    @include adaptiveValue("gap", 60, 15);
+
+    @media (max-width: em(660)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-reviews-ibg {
+  position: relative;
+  display: block;
+  border-radius: toRem(45);
+  overflow: hidden;
+  padding-bottom: percent(300, 255);
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        color: #1e93d8;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.company-video {
+  @include adaptiveValue("padding-top", 55, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__text {
+    color: #2b2b2b;
+    @include adaptiveValue("font-size", 40, 30);
+    font-weight: 500;
+    line-height: 120%; /* 48px */
+    @include adaptiveValue("margin-bottom", 50, 40);
+  }
+
+  &__video-ibg {
+    border-radius: toRem(45);
+    overflow: hidden;
+    padding-bottom: percent(568, 1200);
+    display: block;
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          color: #1e93d8;
+        }
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.main-objectives {
+  @include adaptiveValue("padding-top", 55, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 40);
+    max-width: toRem(550);
+  }
+
+  &__list {
+    display: grid;
+    row-gap: toRem(30);
+    @include adaptiveValue("column-gap", 60, 30, 0, 1230, 767);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    line-height: 145%; /* 23.2px */
+    @include adaptiveValue("padding-left", 25, 12);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: toRem(5);
+      height: toRem(5);
+      top: toRem(9);
+      @include adaptiveValue("left", 13, 0);
+      background-color: #2b2b2b;
+      border-radius: 50%;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    @include adaptiveValue("margin-top", 100, 40);
+  }
+}
+
+//========================================================================================================================================================
