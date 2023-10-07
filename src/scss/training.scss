@@ -1,0 +1,113 @@
+.course {
+  @include adaptiveValue("padding-top", 50, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+  }
+
+  &__title {
+    color: #2b2b2b;
+    @include adaptiveValue("font-size", 40, 25);
+    font-weight: 500;
+    line-height: 120%; /* 48px */
+    @include adaptiveValue("margin-bottom", 55, 40);
+  }
+
+  &__items {
+  }
+
+  &__item {
+  }
+}
+.item-course {
+  border-bottom: toRem(1) solid rgba(43, 43, 43, 0.4);
+  &:first-child {
+    border-top: toRem(1) solid rgba(43, 43, 43, 0.4);
+  }
+
+  padding: toRem(20) 0;
+  display: flex;
+  justify-content: space-between;
+  gap: toRem(30);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: toRem(600);
+  }
+
+  &__title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120.8%; /* 29/24 */
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+
+    a {
+      position: relative;
+      width: fit-content;
+      padding-right: toRem(45);
+
+      &::before {
+        font-size: toRem(25);
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    color: #000;
+    line-height: 145%; /* 23.2px */
+
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+  }
+
+  &__time {
+    margin-top: auto;
+  }
+
+  &__image-ibg {
+    height: fit-content;
+    overflow: hidden;
+    border-radius: toRem(45);
+    height: toRem(250);
+    flex: 0 0 toRem(250);
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    img {
+      transition: all 0.3s ease 0s;
+    }
+  }
+}

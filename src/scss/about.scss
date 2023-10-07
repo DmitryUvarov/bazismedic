@@ -27,7 +27,7 @@
 .item-reviews-ibg {
   position: relative;
   display: block;
-  border-radius: toRem(45);
+  @include adaptiveValue("border-radius", 45, 35);
   overflow: hidden;
   padding-bottom: percent(300, 255);
 
@@ -53,14 +53,14 @@
 
   &__text {
     color: #2b2b2b;
-    @include adaptiveValue("font-size", 40, 30);
+    @include adaptiveValue("font-size", 40, 25);
     font-weight: 500;
     line-height: 120%; /* 48px */
     @include adaptiveValue("margin-bottom", 50, 40);
   }
 
   &__video-ibg {
-    border-radius: toRem(45);
+    @include adaptiveValue("border-radius", 45, 35);
     overflow: hidden;
     padding-bottom: percent(568, 1200);
     display: block;
@@ -90,7 +90,7 @@
 
   &__list {
     display: grid;
-    row-gap: toRem(30);
+    @include adaptiveValue("row-gap", 30, 20);
     @include adaptiveValue("column-gap", 60, 30, 0, 1230, 767);
 
     @media (min-width: $tablet) {
