@@ -44,6 +44,19 @@
     }
   }
 
+  &_line_white {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #fff;
+        color: #2b2b2b;
+      }
+    }
+  }
+
   &_bg {
     background-color: #7d98a5;
     color: #fff;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header-dark.htm',{})
+        <main class="page">
+
+            <section class="article-course">
+                <div class="article-course__container">
+                    <div class="article-course__body">
+                        <div class="article-course__image-ibg"><img src="@img/article-course/main03.jpg" alt=""></div>
+                        <div class="article-course__content">
+                            <h1 class="article-course__title">Курс «Инъекции ботокс»</h1>
+                            <div class="article-course__text">
+                                <p>Инъекции ботулотоксинов широко используются в современной косметологии как эффективное средство для мимической и возрастной коррекции. Препараты блокируют поступающие к мышцам нервные импульсы, избирательно снижают тонус. Кожа в обработанных зонах расправляется, приобретает гладкость; исчезают морщины, дряблость и проявления негативной мимики.</p>
+                                <p>Мы приглашаем на курсы ботокса специалистов с медицинским образованием, желающих расширить свои профессиональные возможности.</p>
+                                <p>На третий день постановка руки на клиентах.</p>
+                            </div>
+                            <div class="article-course__list list">
+                                <li>Пора научиться делать уколы?</li>
+                                <li> Хочется быть во всеоружии, если потребуется кому-то оказать первую помощь?</li>
+                                <li>Для работы в салоне требуется диплом медсестры?</li>
+                            </div>
+                            <button class="article-course__button button button_line" data-popup="#contact">Записаться на курс</button>
+                        </div>
+                    </div>
+
+                    <div data-showmore="items" class="article-course__showmore showmore">
+                        <div data-showmore-button class="showmore__title">Описание курса</div>
+                        <div data-showmore-content="2" class="showmore__content">
+                            <p>Освоение инъекционных технологий моделирования лица; обучение включает теоретическую часть и практические занятия.</p>
+                            <p>Трёхдневные курсы ботокса: Программа обучения компактна и рассчитана на три дня, занятия длятся по 4 часа.Первый день посвящен обработке ботоксом более простых областей: височной зоны и верхней трети лица.На второй день учащиеся переходят к сложным участкам, таким как нижняя лицевая треть и шея, с использованием инъекций ботокса и диспорта.</p>
+
+                            <div class="showmore__images">
+                                <div class="showmore__image-ibg"><img src="@img/article-course/05.jpg" alt=""></div>
+                                <div class="showmore__image-ibg"><img src="@img/article-course/06.jpg" alt=""></div>
+                            </div>
+
+                            <div class="showmore__subtitle">Программа курса:</div>
+
+                            <div class="showmore__program">
+                                <div class="showmore__col">
+                                    <ul>
+                                        <li>История инъекционных методик моделирования.</li>
+                                        <li>Показания к применению ботулотоксинов типа А.</li>
+                                        <li>Относительные/абсолютные противопоказания.</li>
+                                        <li>Требования к оснащению медицинского кабинета необходимым для процедуры оборудованием, хранению препаратов и другие материально-технические вопросы.</li>
+                                        <li>Как разводить и готовить инъекционные препараты.</li>
+                                        <li>Возможные осложнения при использовании ботулотоксинов и их устранение.</li>
+                                    </ul>
+
+                                </div>
+                                <div class="showmore__col">
+                                    <ul>
+                                        <li>Собственно технология и пошаговое описание процедуры.</li>
+                                        <li>Инъекционная техника, схемы инъектирования, рекомендуемые дозы. Практические занятия проводятся с участием моделей, предоставляемых нашей школой; по желанию, учащиеся могут воспользоваться услугами собственных моделей. Знания, полученные на наших курсах, помогут повысить ваш профессиональный уровень и расширить спектр выполняемых услуг.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button data-showmore-button type="button" class="showmore__more"><span>Показать еще</span><span>Скыть</span></button>
+                    </div>
+
+                </div>
+            </section>
+
+            @@include('html/_submit.htm',{})
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

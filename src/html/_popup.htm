@@ -1,10 +1,32 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="contact" aria-hidden="true" class="popup popup-contact">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
+			<button tabindex="-1" data-close type="button" class="popup__close">Закрити</button>
+			<div class="popup-contact__title">Оставьте свои данные и наш менеджер свяжется
+				с вами в ближайшее время!</div>
+			<form action="#" class="popup-contact__form contact-form">
+				<input autocomplete="off" type="text" name="name" placeholder="Ваше имя*" class="contact-form__input input">
+				<input autocomplete="off" type="text" name="phone" placeholder="Ваш телефон*" class="contact-form__input input">
+				<input autocomplete="off" type="text" name="comment" placeholder="Комментарий" class="contact-form__input input">
+				<button class="contact-form__button button button_line button_line_white">Записаться на курс</button>
+			</form>
+			<div class="popup__bg-ibg"><img src="@img/popup/01.jpg" alt=""></div>
+		</div>
+	</div>
+</div>
+<div id="buy" aria-hidden="true" class="popup popup-contact">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button tabindex="-1" data-close type="button" class="popup__close">Закрити</button>
+			<div class="popup-contact__title">Оставьте свои данные и наш менеджер свяжется
+				с вами в ближайшее время!</div>
+			<form action="#" class="popup-contact__form contact-form">
+				<input autocomplete="off" type="text" name="name" placeholder="Ваше имя*" class="contact-form__input input">
+				<input autocomplete="off" type="text" name="phone" placeholder="Ваш телефон*" class="contact-form__input input">
+				<input autocomplete="off" type="text" name="comment" placeholder="Комментарий" class="contact-form__input input">
+				<button class="contact-form__button button button_line button_line_white">Купить</button>
+			</form>
+			<div class="popup__bg-ibg"><img src="@img/popup/01.jpg" alt=""></div>
 		</div>
 	</div>
 </div>

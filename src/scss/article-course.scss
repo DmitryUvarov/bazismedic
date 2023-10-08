@@ -1,0 +1,208 @@
+.article-course {
+  @include adaptiveValue("padding-top", 120, 50);
+  @include adaptiveValue("padding-bottom", 90, 60);
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 60, 20, 0, 1230, 767);
+    row-gap: toRem(30);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(501, 570);
+    height: fit-content;
+    overflow: hidden;
+    border-radius: toRem(45);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    line-height: 130%;
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 35, 25);
+    font-weight: 600;
+    line-height: 120%; /* 42px */
+
+    @include adaptiveValue("margin-bottom", 60, 40);
+  }
+
+  &__text {
+    @include adaptiveValue("margin-bottom", 30, 20);
+
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 15);
+      }
+    }
+  }
+
+  &__list {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__button {
+    width: 100%;
+    font-weight: 600;
+    color: #000;
+    margin-top: auto;
+  }
+
+  &__showmore {
+    @include adaptiveValue("margin-top", 120, 50);
+  }
+}
+
+//========================================================================================================================================================
+
+.showmore {
+  &__title {
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+    color: #000;
+    @include adaptiveValue("font-size", 35, 25);
+    font-weight: 600;
+    line-height: 130%; /* 45.5px */
+
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      transition: all 0.3s ease-out 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          background-color: #1e93d8;
+        }
+      }
+    }
+  }
+
+  &__content {
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(30);
+      }
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("gap", 52, 20, 0, 1230, 767);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+    @include adaptiveValue("margin-top", 60, 30);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 40);
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(400, 570);
+    height: fit-content;
+    overflow: hidden;
+    border-radius: toRem(45);
+  }
+
+  &__subtitle {
+    color: #000;
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: 130%; /* 31.2px */
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+  }
+
+  &__program {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 50, 20, 0, 1230, 767);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+    ul {
+      &:not(:last-child) {
+        margin-bottom: toRem(30);
+      }
+    }
+
+    P {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+    li {
+      line-height: 145%;
+      &:not(p) {
+        position: relative;
+        @include adaptiveValue("padding-left", 25, 12);
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: toRem(5);
+          height: toRem(5);
+          top: toRem(7);
+          @include adaptiveValue("left", 13, 0);
+          background-color: #2b2b2b;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    font-size: toRem(18);
+    margin-top: toRem(30);
+    font-weight: 500;
+    color: #1e93d8;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      background-color: #1e93d8;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-out 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
