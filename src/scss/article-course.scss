@@ -77,25 +77,6 @@
     &:not(:last-child) {
       margin-bottom: toRem(30);
     }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: toRem(1);
-      bottom: 0;
-      left: 0;
-      background-color: #000;
-      transition: all 0.3s ease-out 0s;
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        &::before {
-          background-color: #1e93d8;
-        }
-      }
-    }
   }
 
   &__content {
