@@ -30,7 +30,13 @@
 
 					</div>
 				</div>
-				<div class="hero__bg-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+				<div class="hero__bg-ibg">
+					<picture>
+						<source srcset="@img/hero/small01.jpg" media="(max-width: 600px)" type="image/webp">
+						<source srcset="@img/hero/01.jpg" type="image/webp">
+						<img src="@img/hero/01.jpg" alt="">
+					</picture>
+				</div>
 			</section>
 
 
